@@ -1,0 +1,3 @@
+$sql = "SELECT bookdata.bookcode , currentdata.bookcode from bookdata LEFT OUTER JOIN currentdata on bookdata.bookcode = currentdata.bookcode where currentdata.bookcode is null and bookdata.status =\"stock\"";
+
+SELECT bookdata.bookcode , currentdata.bookcode from bookdata LEFT OUTER JOIN currentdata on bookdata.bookcode = currentdata.bookcode where currentdata.bookcode is null and bookdata.status ="stock";

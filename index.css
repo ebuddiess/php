@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+}
+h1{
+    text-align: center;
+    font-size: 30px;
+    padding: 20px;
+    outline-width: thin;
+    outline-style: dashed;
+    font-family: cursive;
+    border-bottom: 1px solid black;
+    background-color:aqua;
+}
