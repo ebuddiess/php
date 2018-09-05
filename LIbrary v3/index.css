@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+}
+
+h1{
+    text-align: center;
+    font-size: 30px;
+    color:white;
+    padding: 20px;
+    outline-width: thin;
+    outline-style: dashed;
+    font-family: cursive;
+    border-bottom: 1px solid black;
+    background-color:#e62a76;
+}
+
+.jumbotron{
+    padding:0; 
+    background-color: cornflowerblue;
+    padding-bottom:20px;
+}
+
+form {
+    color: white;
+}
+
+input[type='file']{
+    padding: 10px;
+}
+
+#submit{
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 4px;
+}
+
+#submit:hover{
+    background: white;
+    color:black;
+    cursor: pointer;
+    transform: scale(1.2,1.2);
+}
+
+#labelError{
+    padding: 20px;
+    text-align: center;
+}
+
+#records{
+    visibility: hidden;
+    border: 1px solid black;
+    padding: 20px;
+    height:400px;
+    overflow: scroll;
+}
+.changemode{
+    visibility: hidden;
+}
+
+.btn-group{
+    margin-left:120px;
+}
+.nocolorcontainer{
+ margin-top: 20px;
+ background: white;   
+}
+.divider {
+    background-color: aqua;
+    width: 100%;
+    height: 20px;
+}
+
+.divider .left,.right{
+    width: 50%;
+    float: left;
+    height:100%;
+}
+
+.left{
+    background-color: black;
+}
+.right{
+    background-color: black;
+}
+
+.fileuploader{
+    width: 100%;
+    height: 25vh;
+}
+
+.fileuploader .orignalfile,.comparefile{
+    width: 50%;
+    float: left;
+}
+
+.fileuploader .orignalfile{
+    padding:10px;
+    border-right: 2px solid black;
+    box-sizing: border-box;
+}
+
+.fileuploader .comparefile{
+    padding:10px;
+    box-sizing: border-box;
+}
+
+h4{
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 15px;
+}

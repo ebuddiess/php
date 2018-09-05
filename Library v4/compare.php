@@ -1,8 +1,21 @@
-$sql = "SELECT bookdata.bookcode , currentdata.bookcode from bookdata LEFT OUTER JOIN currentdata on bookdata.bookcode = currentdata.bookcode where currentdata.bookcode is null and bookdata.status =\"stock\"";
+<?php 
+$servername = "localhost";
+$username = "puneet";
+$password = "123456";
+$dbname = "library";
 
-SELECT bookdata.bookcode , currentdata.bookcode from bookdata LEFT OUTER JOIN currentdata on bookdata.bookcode = currentdata.bookcode where currentdata.bookcode is null and bookdata.status ="stock";
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+$sqlSelect = "SELECT * FROM currentdata";
+$result = mysqli_query($conn, $sqlSelect);
 
-
+if (mysqli_num_rows($result) <=0) {
+echo "No Records Upload A Comparison file Please";
+}else{    
 $sql = "SELECT bookdata.bookcode as BOOKCODE , bookdata.status as STATUS , currentdata.bookcode as CURRENT from bookdata LEFT OUTER JOIN currentdata on bookdata.bookcode = currentdata.bookcode";
 $result = mysqli_query($conn, $sql);
 
@@ -25,4 +38,6 @@ if (mysqli_num_rows($result) > 0) {
      
 } else {
      echo "<div class='alert alert-danger'><strong>Sorry</strong> You Dont Have Any records </div>";
+}      
 }
+?>
