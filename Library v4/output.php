@@ -19,7 +19,7 @@ echo "No Records Upload A Comparison file Please";
 $sql = "SELECT bookdata.bookcode  as BOOKCODE, currentdata.bookcode as CURRENT from bookdata LEFT OUTER JOIN currentdata on bookdata.bookcode = currentdata.bookcode where currentdata.bookcode is null and bookdata.status =\"stock\"";
 
 $result = mysqli_query($conn, $sql);
-
+$sum = 0;
 if (mysqli_num_rows($result) > 0) {
      echo "<div class='table-responsive'><table id='myTable' class='table table-striped table-bordered'>
              <thead class='thead-dark'><tr><th>BOOK CODE</th>
@@ -27,10 +27,11 @@ if (mysqli_num_rows($result) > 0) {
                         </tr></thead><tbody>"; 
      while($row = mysqli_fetch_assoc($result)){
      echo "<tr><td>".$row['BOOKCODE']."</td><td>NOT FOUND</td></tr>";                  
+     $sum=$sum+1;
      }
     
      echo "</tbody></table></div>";
-     
+     echo "<h3>Total:".$sum."</h3>";
 } else {
      echo "<div class='alert alert-danger'><strong>Sorry</strong> You Dont Have Any records </div>";
 }      

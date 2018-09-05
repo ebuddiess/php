@@ -21,17 +21,19 @@ $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
      echo "<div class='table-responsive'><table id='myTable' class='table table-striped table-bordered'>
-             <thead class='thead-dark'><tr><th>BOOK CODE</th>
+             <thead class='thead-dark'><tr><th>INDEX</th><th>BOOK CODE</th>
                           <th>STATUS</th><th>Current Status</th>
-                        </tr></thead><tbody>"; 
+                        </tr></thead><tbody>";
+    $i=1;
      while($row = mysqli_fetch_assoc($result)){
      if($row['STATUS']=="sale"){
-                 echo "<tr><td>".$row['BOOKCODE']."</td><td>".$row['STATUS']."</td><td>SOLD</td></tr>";         
+                 echo "<tr><td>$i</td><td>".$row['BOOKCODE']."</td><td>".$row['STATUS']."</td><td>SOLD</td></tr>";         
      }else if($row['CURRENT']==""){
-        echo "<tr><td>".$row['BOOKCODE']."</td><td>".$row['STATUS']."</td><td>UNAVAILABLE</td></tr>";         
+        echo "<tr><td>$i</td><td>".$row['BOOKCODE']."</td><td>".$row['STATUS']."</td><td>UNAVAILABLE</td></tr>";         
      }else{
-     echo "<tr><td>".$row['BOOKCODE']."</td><td>".$row['STATUS']."</td><td>".$row['CURRENT']."</td></tr>";                  
+     echo "<tr><td>$i</td><td>".$row['BOOKCODE']."</td><td>".$row['STATUS']."</td><td>".$row['CURRENT']."</td></tr>";                  
      }
+     $i=$i+1;     
      }
     
      echo "</tbody></table></div>";
