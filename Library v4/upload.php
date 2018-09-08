@@ -21,10 +21,12 @@ if (isset($_POST["import"])) {
         
         $file = fopen($fileName, "r");
         
-        while (($column = fgetcsv($file, 10000, ",")) !== FALSE) {
+        while (($column = fgetcsv($file,1000, ",")) !== FALSE) {
                         $sqlInsert = "INSERT into bookdata values ('" . $column[0] . "','" . $column[1] . "')";
                         $result = mysqli_query($conn, $sqlInsert);
-                        if (! empty($result)) {
+        }
+        fclose($fileName);
+                 if (! empty($result)) {
                         echo "<script type=\"text/javascript\">
 							  alert('uploaded Sucessfully')
                               window.location = \"index.html\"
@@ -35,8 +37,6 @@ if (isset($_POST["import"])) {
                               window.location = \"index.html\"
 						      </script>";	
                             }
-        }
-        fclose($fileName);	
     }
 }
 
