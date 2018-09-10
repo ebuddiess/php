@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.button-group {
+    margin: 1% 10%;
+}
+
+.search-bar {
+    max-width: 80%;
+    padding: 4px;
+}
+
+#records {
+    visibility: hidden;
+    border: 1px solid black;
+    padding: 20px;
+    height: auto;
+    overflow: scroll;
+}
+
+.batchupdate {
+    color: white;
+    text-decoration: none;
+}
+
+.batchupdate:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.save {
+    padding: 20px;
+    background-color: black;
+}
+
+.saveform {
+    display: inline-block;
+}
+
+#modelerror {
+    padding: 10px;
+}
