@@ -1,0 +1,35 @@
+1. Change the name to Book Store 
+2. Decrease the area size of file upload ..................................................................................
+3. Decrease the area size of Buttons and Search Bar
+4. Increase the display area of book data
+5. Modify Should be opened in a new window in the form of text boxes
+6. Delete option can be given at the end of the record
+7. Fields in the excel file of book
+
+book_id(PK)   booktype   status  mrp  purchase_price  sale_price  supplier_id(FK)  purchase_date picture_id(picture_id should be same as of book_id)
+
+While uploading the new excel file there should be a check on book_id that it does not exist in the database
+and there will be a message to the user that these book_id preexist in the database and you need to change
+them and rest of the books will be added in the database...............................................
+
+8. Option to export the database to excel or pdf
+
+9. Values of status will be : Sold, In-Stock, Sent-4-Correction, Sent-As-Sample............................................................
+
+10. There will be three types of bill : Sale, Correction and Sample
+
+11. For Stock Verficiation :
+
+Upload excel file with barcode and compare with exisitng data.
+
+12. Make a provision for making in bulk the items which are sold ,sample,correction...........................................
+
+13. Types of Missing Book : There will be two types of mismatch in stock verification
+
+a. Book Present in the physical stock but it is showing as sold , correcrtion , samplein master table.  (Term used in stock verification result is : Incorrect Sale Entry)
+
+b. Book showing as In-Stock but not present in physical stock. (Term used in stock verification result is : Missing in Stock) 
+
+14. Interface to change the details of book including stock.
+
+

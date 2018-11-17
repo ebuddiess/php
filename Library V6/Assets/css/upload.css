@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.jumbotron {
+    margin: 2% auto;
+    width: 80%;
+    border: 6px solid black;
+    padding: 0%;
+    background-color: rgb(131, 31, 212);
+    margin-bottom: 20px;
+}
+
+.divider {
+    height: 10px;
+    background: black;
+    width: 100%;
+}
+
+.fileuploader {
+    padding: 20px;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+}
+
+.orignalfile,
+.comparefile {
+    padding: 1px;
+    color: white;
+    width: 50%;
+    float: left;
+}
+
+.orignalfile {
+    border-right: 2px solid black;
+}
+
+h4 {
+    margin-top: 5%;
+    margin-left: 2%;
+}
+
+input[type='submit']:hover {
+    background: white;
+    color: black;
+    cursor: pointer;
+}
+
+input[type='submit'] {
+    padding: 3px;
+}
+
+#labelError {
+    clear: both;
+    color: white;
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+}
+
+section {
+    width: 80%;
+    height: auto;
+    background: rgb(44, 139, 177);
+    margin: 0 auto;
+    padding: 12px;
+    border: 6px solid black;
+    margin-bottom: 10px;
+}
+
+article h3 {
+    text-align: center;
+}
+
+article h4 {
+    margin: 3px 15px;
+    font-size: 20px;
+}
+
+#labelError {
+    color: black;
+}
+
+.status {
+    color: black;
+    background-color: aqua;
+}

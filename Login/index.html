@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
+</head>
+
+<body>
+    <div class="box">
+        <div class="toggler">
+            <div class="login" onclick="login()">
+                <h4>LOGIN</h4>
+            </div>
+            <div class="signup" onclick="signup()">
+                <h4>SIGNUP</h4>
+            </div>
+        </div>
+        <div class="body">
+            <div class="login-form">
+                <form action="">
+                    <input type="text" name="" id="" placeholder="Enter Your Username"><br>
+                    <input type="text" name="" id="" placeholder="Enter Your Password"><br>
+                    <button>Login</button>
+                </form>
+            </div>
+            <div class="signup-form">
+                <form action="">
+                    <input type="text" name="" id="" placeholder="Choose Username"><br>
+                    <input type="text" name="" id="" placeholder="Choose Password"><br>
+                    <button>Sign up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var toglogin, togsignup, login_form, signup_form;
+        toglogin = document.querySelector(".login");
+        togsignup = document.querySelector(".signup")
+        login_form = document.querySelector(".login-form");
+        signup_form = document.querySelector(".signup-form")
+        function signup() {
+            toglogin.style.color = "black";
+            toglogin.style.background = "rgb(216, 212, 218)";
+            togsignup.style.background = "rgb(243, 10, 127)";
+            login_form.style.visibility = "hidden"
+            signup_form.style.visibility = "visible"
+        }
+        function login() {
+            togsignup.style.background = "rgb(216, 212, 218)";
+            toglogin.style.background = "rgb(243, 10, 127)";
+            login_form.style.visibility = "visible"
+            signup_form.style.visibility = "hidden"
+        }
+    </script>
+</body>
+
+</html>

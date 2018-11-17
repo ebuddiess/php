@@ -1,0 +1,24 @@
+.container {
+    flex-direction: column;
+    display: flex;
+}
+
+.row {
+    width: 90%;
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 100px;
+    background: rgb(20, 235, 235);
+}
+
+.col {
+    margin: 10px;
+    background-size: cover;
+    background: url("../images.jpg") center;
+    background-origin: border-box;
+}
+
+.report {
+    width: 80%;
+    margin: 10px auto;
+}
